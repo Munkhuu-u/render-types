@@ -11,10 +11,10 @@ export default function Home(props) {
       <p>HOME PAGE </p>
       <button
         onClick={() => {
-          router.push("/card1");
+          router.push("/hl");
         }}
       >
-        goto card 1
+        goto HIGHLIGHT
       </button>
     </div>
   );
