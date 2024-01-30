@@ -2,6 +2,8 @@ import { Header } from "./Header";
 import { Highlight } from "./Highlight";
 import { Trends } from "./Trends";
 import { Blogs } from "./Blogs";
+import { LoadMore } from "./LoadMore";
+import { Footer } from "./Footer.js";
 
 export const getStaticProps = async () => {
   const His = await fetch("https://dev.to/api/articles?per_page=1&top=1");
@@ -24,6 +26,8 @@ export default function Home({ highlight, trends, blogs }) {
       <Highlight data={highlight} />
       <Trends data={trends} />
       <Blogs data={blogs} />
+      <LoadMore />
+      <Footer />
     </div>
   );
 }
