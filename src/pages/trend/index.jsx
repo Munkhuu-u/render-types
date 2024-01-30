@@ -12,7 +12,7 @@ export default function Index(props) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://dev.to/api/articles?username=ben");
+  const res = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const data = await res.json();
   return { props: { data } };
 };

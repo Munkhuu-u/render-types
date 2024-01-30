@@ -1,2 +1,3 @@
+export * from "./Blog";
 export * from "./Trend";
-export * from "./Post";
+export * from "./Blogs";
