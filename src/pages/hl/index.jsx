@@ -6,7 +6,7 @@ export const getStaticProps = async () => {
   return { props: { data } };
 };
 
-export default function Todo(props) {
+export default function Highlight(props) {
   const router = useRouter();
   return (
     <div>
