@@ -10,7 +10,7 @@ export const getServerSideProps = async () => {
 
 export default function page({ data }) {
   return (
-    <div>
+    <div className="flex flex-wrap">
       {data.map((aData) => {
         return <Blog aData={aData} tag="Design" />;
       })}

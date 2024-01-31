@@ -6,20 +6,13 @@ import { LoadMore } from "./LoadMore";
 import { Footer } from "./Footer.js";
 
 export const getStaticProps = async () => {
-
-
-
   const His = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const highlight = await His.json();
-
   const Trs = await fetch("https://dev.to/api/articles?per_page=4&top=1");
   const trends = await Trs.json();
-
   const Bls = await fetch("https://dev.to/api/articles?per_page=15");
   const blogs = await Bls.json();
-
   return { props: { highlight, trends, blogs } };
-
 };
 
 export default function Home({ highlight, trends, blogs }) {
