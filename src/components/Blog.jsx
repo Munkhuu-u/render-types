@@ -1,5 +1,4 @@
 export const Blog = ({ aData }) => {
-  console.log(aData);
   return (
     <div className="w-[392px] h-[476px] bg-white flex flex-col p-[16px] border rounded-lg gap-[16px]">
       <div

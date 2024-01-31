@@ -14,6 +14,7 @@ export const Highlight = ({ data }) => {
           backgroundImage: `url(${highlight.cover_image})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          bachgroundPosition: "center",
         }}
       />
       <div className="max-w-[598px] bg-white absolute border border-gray-200 rounded-xl left-[11px] bottom-[13px] flex flex-col gap-6 p-[40px] justify-start">
