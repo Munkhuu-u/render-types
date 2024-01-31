@@ -6,6 +6,9 @@ import { LoadMore } from "./LoadMore";
 import { Footer } from "./Footer.js";
 
 export const getStaticProps = async () => {
+
+
+
   const His = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const highlight = await His.json();
 
@@ -16,10 +19,10 @@ export const getStaticProps = async () => {
   const blogs = await Bls.json();
 
   return { props: { highlight, trends, blogs } };
+
 };
 
 export default function Home({ highlight, trends, blogs }) {
-  console.log(trends);
   return (
     <div className="flex flex-col gap-[100px]">
       <Header />

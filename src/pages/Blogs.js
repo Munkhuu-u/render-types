@@ -16,7 +16,7 @@ export function Blogs({ data }) {
       </div>
       <div className="flex flex-row flex-wrap gap-[16px]">
         {data.map((aData) => {
-          return <Blog aData={aData} />;
+          return <Blog aData={aData} tag={aData.tag_list[0]} />;
         })}
       </div>
     </div>

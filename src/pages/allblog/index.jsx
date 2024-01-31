@@ -1,5 +1,5 @@
 import { Blog } from "../../components/Blog";
-
+import { useRouter } from "next/router";
 // export const getServerSideProps = async (context) => {
 //   const { query } = context;
 //   // console.log("context: ", context);
@@ -21,22 +21,19 @@ export const getStaticProps = async () => {
   const res = await fetch("https://dev.to/api/articles?per_page=15&top=1");
   const data = await res.json();
   const someArr = [
-    { name: "All" },
-    { name: "Design" },
-    { name: "Travel" },
-    { name: "Fashion" },
-    { name: "Technology" },
-    { name: "Branding" },
+    { buttName: "All" , routerName: ""},
+    { buttName: "Design" , routerName: "design"},
+    { buttName: "Travel" , routerName: "travel"},
+    { buttName: "Fashion" , routerName: "fashion"},
+    { buttName: "Technology" , routerName: "technology"},
+    { buttName: "Branding" , routerName: "branding"},
   ];
   // console.log("log fromr sta", data);
   return { props: { data, someArr } };
 };
 
 export default function page({ data, someArr }) {
-  // const { data, someArr } = props;
-  // console.log("from AllBlog props: ", props);
-  console.log("logging from allblog page data:", data);
-  console.log("logging from allblog page someArr: ", someArr);
+  const router = useRouter()
   return (
     <div className="max-w-[1216px] flex flex-col gap-[32px] m-auto justify-">
       <h2 className="text-gray-900 text-2xl font-bold">All Blog Post</h2>
@@ -47,9 +44,9 @@ export default function page({ data, someArr }) {
             return (
               <button
                 className="text-gray-500 font-bold"
-                onClick={() => router.push("/allBlog")}
+                onClick={() => router.push(`/allblog/${e.routerName}`)}
               >
-                {e.name}
+                {e.buttName}
               </button>
             );
           })}
