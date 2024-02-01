@@ -1,4 +1,4 @@
-export const Blog = ({ aData , tag }) => {
+export const Blog = ({ aData, tag }) => {
   return (
     <div className="w-[392px] h-[476px] bg-white flex flex-col p-[16px] border rounded-lg gap-[16px]">
       <div
