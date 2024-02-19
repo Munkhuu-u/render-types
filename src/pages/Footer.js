@@ -1,7 +1,7 @@
 import { Facebook, Twitter, LinkedIn, Instagram } from "@/components/icons";
 export const Footer = () => {
   return (
-    <div className="flex gap-5 w-max-[1218px] m-auto  mb-[200px]">
+    <div className="flex gap-5 w-max-[1218px] m-auto mt-[264px] bg-red-500">
       <div className="flex flex-col gap-6 w-[289px]">
         <div className="flex flex-col gap-3">
           <p className="text-gray-900 text-lg font-semibold">About</p>
